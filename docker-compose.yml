@@ -1,0 +1,12 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - adieu-data:/data
+    environment:
+      - DB_PATH=/data/adieu.db
+
+volumes:
+  adieu-data:
